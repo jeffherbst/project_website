@@ -1,0 +1,20 @@
+
+<html>
+  <body>
+    <div class="games">
+      <% games.each do |game| %>
+        <div class="game">
+          <h2 class="name">
+           <a href="/show_game/<%= game['id'] %>"><%= game['name'] %></a>
+          </h2>
+
+          <small class = "meta">
+	    <span class = "type"> Genre:  <%= game['type'] %> </span>
+          </small>
+        </div>
+        <hr />
+      <% end %>
+    </div>
+
+  </body>
+</html>
