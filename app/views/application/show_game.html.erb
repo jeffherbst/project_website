@@ -1,0 +1,20 @@
+<html>
+  <body>
+    <a href="/list_games">Back to Posts</a>
+    <div class="game">    
+      <h2 class="name">
+        <%= game['name'] %>
+      </h2>
+
+      <small class="meta">
+        <span class="type"> Genre: <%= game['type'] %> </span>
+        <em class = "release_date"> -Release Date- <%= game['release_date'] %> </em>
+      </small>
+
+      <p class="rating"> <%= game['rating'] %> stars </p>
+
+    </div>
+    <br />
+
+  </body>
+</html>
