@@ -16,6 +16,21 @@ class ApplicationController < ActionController::Base
     render 'application/show_game', locals: {game: game}
   end
 
+  def new_game
+    render 'application/new_game'
+  end
+
+  def create_game
+    insert_query = <<-SQL
+      INSERT INTO games (name, type, release_date, rating)
+      VALUES (?, ?, ?, ?)
+    SQL
+
+    connection.execute insert_query, params['name'], params['type'], params['release_date'], params['rating']
+
+    redirect_to '/list_games'
+  end
+
   private
 
   def connection

@@ -4,4 +4,6 @@ Rails.application.routes.draw do
   get '/hello/:name' => 'application#hello_world'
   get '/list_games' => 'application#list_games'
   get '/show_game/:id' => 'application#show_game'
+  get '/new_game' => 'application#new_game'
+  post '/create_game' => 'application#create_game'
 end
